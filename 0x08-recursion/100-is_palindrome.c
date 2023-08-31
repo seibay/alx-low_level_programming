@@ -7,13 +7,8 @@
  */
 int is_palindrome(char *s)
 {
-	int len;
+	int len = _strlen_recursion(s);
 
-	len = 0;
-	while (s[len] != '\0')
-	{
-		len++;
-	}
 	return (is_palindrome_recursive(s, 0, len - 1));
 }
 
@@ -35,4 +30,18 @@ int is_palindrome_recursive(char *s, int start, int end)
 		return (0);
 	}
 	return (is_palindrome_recursive(s, start + 1, end - 1));
+}
+
+/**
+ * _strlen_recursion - returns the length of a string
+ * @s: String to calculate its length
+ * Return: Length of a string
+ */
+int _strlen_recursion(char *s)
+{
+	if (*s == '\0')
+	{
+		return (0);
+	}
+	return (1 + _strlen_recursion(s + 1));
 }
