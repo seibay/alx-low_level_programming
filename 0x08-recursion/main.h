@@ -17,5 +17,6 @@ int is_palindrome(char *s);
 int wildcmp(char *s1, char *s2);
 int cal_sqrt(int n, int base);
 int is_prime_recursive(int n, int div);
+int is_palindrome_recursive(char *s, int start, int end);
 
 #endif
