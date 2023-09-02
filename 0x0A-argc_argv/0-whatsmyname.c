@@ -5,7 +5,7 @@
  * main - prints its name
  * @argc: size of argv array and number of command line arguments
  * @argv: array of size argc and it contains the program cl argts
- * return: always 0
+ * Return: the program's name
  */
 int main(int argc __attribute__((unused)), char *argv[])
 {
