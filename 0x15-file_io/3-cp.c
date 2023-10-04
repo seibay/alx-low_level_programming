@@ -7,11 +7,11 @@
 #define PERMISSIONS (S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH)
 
 /**
- * main - program
- * @ac: argumrnt count
- * @av: argumrnt vector
+ * main - Entry point
+ * @ac: The number of command-line arguments
+ * @av: An array of command-line argument strings
  *
- * Return: 1 on success 0 on failure
+ * Return: 0 on success, or the corresponding error code on failure
  */
 int main(int ac, char **av)
 {
@@ -43,5 +43,5 @@ int main(int ac, char **av)
 	if (to_fd)
 		dprintf(STDERR_FILENO, ERR_NOCLOSE, to_fd), exit(100);
 
-	return (EXIT_SUCCESS);
+	return (0);
 }
